@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Tracker App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="designedBy">Designed By:<br>Karen Boshra</div>
+    <img id="logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+    <div class="container">
+        <h1>Tracking Product Price Changes Using Web Scraping</h1>
+        <p>Thesis Work</p>
+        <div class="search-container">
+            <input type="text" id="urlInput" placeholder="Enter URL">
+            <button id="submitBtn">Submit</button>
+        </div>
+        <div id="loading"><img src="{{ url_for('static', filename='images/loading.gif') }}" alt="Loading..."></div>
+        <div id="confirmation"></div>
+        <table id="dataTable" style="display: none;">
+            <tr>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Currency</th>
+                <th>Date/Time</th>
+            </tr>
+        </table>
+    </div>
+    <script src="{{ url_for('static', filename='functions.js') }}"></script>
+</body>
+</html>
